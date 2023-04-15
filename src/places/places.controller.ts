@@ -40,7 +40,6 @@ export class PlacesController {
     return this.placesService.remove(id);
   }
 
-  // Places File
-  @Post('file')
-  
+  // // Places File
+  // @Post('file')
 }

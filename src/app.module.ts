@@ -5,9 +5,15 @@ import { AppService } from './app.service';
 import { PlacesModule } from './places/places.module';
 import { DatabaseModule } from './database/database.module';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     ThrottlerModule.forRoot({
       ttl: 60,
       limit: 10,
@@ -15,6 +21,8 @@ import { ThrottlerModule } from '@nestjs/throttler';
     // MongooseModule.forRoot(mongoUrl, { isGlobal: true, global: true }),
     DatabaseModule,
     PlacesModule,
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

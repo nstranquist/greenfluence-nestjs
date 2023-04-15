@@ -1,0 +1,12 @@
+runtime: nodejs16
+
+env_variables:
+  PORT: '3000'
+  # MONGODB_URI: 
+
+# skip_files:
+# - ^(.*/)?.*/node_modules/.*
+
+handlers:
+- url: /.*
+  script: auto
