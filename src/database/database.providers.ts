@@ -1,8 +1,6 @@
 import * as mongoose from 'mongoose';
 
-const mongoUrl =
-  'mongodb+srv://root:darkmonkeys@cluster0.sdclrpo.mongodb.net/greenfluence';
-//process.env.MONGODB_URI;
+const mongoUrl = process.env.MONGODB_URI;
 
 export const databaseProviders = [
   {
