@@ -39,4 +39,8 @@ export class PlacesController {
   remove(@Param('id') id: string) {
     return this.placesService.remove(id);
   }
+
+  // Places File
+  @Post('file')
+  
 }
